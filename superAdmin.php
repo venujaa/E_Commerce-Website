@@ -1,0 +1,57 @@
+<?php
+
+    session_start();
+    include "UI_include.php";
+    include INC_DIR."/process/p-superAdmin.php";
+    include INC_DIR.'header.html';
+
+?>
+
+    <body>
+
+    <div class="form">    
+        <div class="heading">
+            <i class="material-icons">admin_panel_settings</i>
+            <h4 class="modal-title">Super Admin Login</h4>
+        </div>
+        <form action="" method="post" class="form-horizontal">
+            <div class="form-group top">
+                <label class="control-label">Email</label>
+                <div>
+                    <input type="text" class="form-control" name="email" <?php $h->keepValues($email, 'textbox'); ?>>
+                </div>        	
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <div>
+                    <input type="password" class="form-control" name="password">
+                </div>        	
+            </div>
+            <div class = "formerror"><?php echo $msg; ?></div>                
+            <div class="form-group">
+                <div>
+                    <center><button type="submit" name = "submit" class="btn btn-primary btn-lg">Log In</button></center>
+                </div>  
+            </div>		      
+
+
+        </form>			
+
+    </div>
+
+    <style>
+        body{
+                background-image:url(images/bg5.jpg);
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+
+            .heading{
+                color:#fff;
+            }
+    </style>
+    </body>
+</html>     
+
+
+                               		                            
